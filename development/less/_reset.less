@@ -1,0 +1,71 @@
+*, ::after, ::before {
+	padding: 0px;
+	margin: 0px;
+	&:focus {
+		outline: none;
+	}
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+body {
+    background: #FFF;
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    max-width: 1920px;
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+a {
+	text-decoration: none;
+	transition: all 0.25s;
+	&:hover {
+		text-decoration: none;
+		transition: all 0.25s;
+	}
+}
+button {
+	transition: all 0.25s;
+	&:hover {
+		transition: all 0.25s;
+	}
+}
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+select:focus, button:focus, input:focus { outline: none; }
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea, select, input[type="number"],
+input[type="tel"] {
+    padding: 8px 10px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+ul li,
+ol li {
+    list-style: none;
+}
+dt {
+	font-weight: inherit;
+}
+p { 
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: normal;
+    margin: 0;
+}

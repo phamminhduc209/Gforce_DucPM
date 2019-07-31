@@ -1,0 +1,93 @@
+.header {
+    &_wrap {}
+    .logo {}
+    &_call {}
+}
+
+.menu {
+    li {
+        a {
+            text-transform: uppercase;
+            font-size: 14px;
+            color: #111;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        &_wrap {
+            .flex-display;
+            .justify-content(@justify: space-between);
+            .align-items(@align: center);
+        }
+        .logo {
+            color: #000;
+            flex: 0 0 250px;
+            -ms-flex: 0 0 250px;
+            font-size: 24px;
+            margin-right: 15px;
+            max-width: 250px;
+            text-align: center;
+        }
+        &_call {
+            background: #000;
+            color: #909090;
+            flex: 0 0 240px;
+            -ms-flex: 0 0 240px;
+            font-size: 15px;
+            max-width: 240px;
+            text-align: center;
+            padding: 23px;
+            a {
+                color: #FFF;
+                display: block;
+                font-size: 18px;
+                margin-top: 15px;
+            }
+        }
+    }
+    .menu {
+        ul {
+            .flex-display;
+            .flex-wrap(@wrap: wrap);
+            .justify-content(@justify: center);
+            .align-items(@align: center);
+            li {
+                padding: 0 33px;
+            }
+        }
+        li {
+            a {
+                font-size: 15px;
+                padding-bottom: 10px;
+                position: relative;
+                &::after {
+                    background: #bababa;
+                    bottom: 0;
+                    content: "";
+                    display: block;
+                    height: 2px;
+                    left: 0;
+                    position: absolute;
+                    right: 0;
+                    width: 0;
+                    -webkit-transition: width .5s ease-in-out;
+                    -moz-transition: width .5s ease-in-out;
+                    -o-transition: width .5s ease-in-out;
+                    transition: width .5s ease-in-out;
+                }
+                &:hover {
+                    opacity: .8;
+                    &::after {
+                        width: 100%;
+                        -webkit-transition: width .5s ease-in-out;
+                        -moz-transition: width .5s ease-in-out;
+                        -o-transition: width .5s ease-in-out;
+                        transition: width .5s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}
