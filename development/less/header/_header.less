@@ -1,7 +1,29 @@
 .header {
-    &_wrap {}
-    .logo {}
-    &_call {}
+    // &.fixed {
+    //     background: #FFF;
+    //     left: 0;
+    //     position: fixed;
+    //     top: 0;
+    //     width: 100%;
+    //     z-index: 9;
+    // }
+    .logo {
+        color: #000;
+        font-weight: bold;
+        text-align: center;
+    }
+    &_call {
+        background: #000;
+        color: #909090;
+        text-align: center;
+        padding: 23px;
+        a {
+            color: #FFF;
+            display: block;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+    }
 }
 
 .menu {
@@ -14,7 +36,20 @@
     }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 1700px) {
+    header {
+        .menu {
+            ul {
+                li {
+                    font-size: 15px;
+                    padding: 10px 15px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 769px) {
     .header {
         &_wrap {
             .flex-display;
@@ -22,29 +57,18 @@
             .align-items(@align: center);
         }
         .logo {
-            color: #000;
             flex: 0 0 250px;
             -ms-flex: 0 0 250px;
             font-size: 24px;
             margin-right: 15px;
             max-width: 250px;
-            text-align: center;
         }
         &_call {
-            background: #000;
-            color: #909090;
+            
             flex: 0 0 240px;
             -ms-flex: 0 0 240px;
             font-size: 15px;
             max-width: 240px;
-            text-align: center;
-            padding: 23px;
-            a {
-                color: #FFF;
-                display: block;
-                font-size: 18px;
-                margin-top: 15px;
-            }
         }
     }
     .menu {
@@ -59,7 +83,6 @@
         }
         li {
             a {
-                font-size: 15px;
                 padding-bottom: 10px;
                 position: relative;
                 &::after {
@@ -88,6 +111,15 @@
                     }
                 }
             }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        .logo {
+            padding: 15px 0;
+            font-size: 30px;
         }
     }
 }

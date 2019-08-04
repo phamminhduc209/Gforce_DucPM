@@ -1,1 +1,1 @@
-!function(a){"use strict"}(jQuery);
+!function(a){"use strict";var b=a(".header").offset().top;a(window).scroll(function(){var c=a(".header");a(window).scrollTop()>=b?c.addClass("fixed"):c.removeClass("fixed")})}(jQuery);
