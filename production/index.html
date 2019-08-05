@@ -15,8 +15,10 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="robots" content="index,follow" />
-    <link rel="shortcut icon" href="images/favicon/favicon-32x32.png" sizes="32x32" type="image/x-icon">
-    <link rel="icon" href="images/favicon/favicon-32x32.png" type="image/x-icon">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon//favicon-16x16.png">
 
     <!-- Font CSS -->
     <link href="libs/fontawesome/font-awesome.min.css" rel="stylesheet">
@@ -36,7 +38,12 @@
         <div class="header_wrap">
             <h1 class="logo">DEALER LOGO</h1>
             <nav class="menu">
-                <ul>
+                <a href="/" class="menu_btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                <ul class="menu_items">
                     <li><a href="/" class="active" title="Home">Home</a></li>
                     <li><a href="/" title="New Cars">New Cars</a></li>
                     <li><a href="/" title="Use Cars">Use Cars</a></li>
@@ -107,6 +114,9 @@
                         </div>
                     </li>
                     <li class="m_jumps_item">
+                        <figure>
+                            <img src="images/jumps_05.jpg" alt="Book A Service">
+                        </figure>
                         <div class="m_jumps_item_des">
                             <h3 class="ttl">vehicle Valuation</h3>
                             <p class="des">Get a free valuation of your vehicle</p>
@@ -121,7 +131,7 @@
                     </li>
                     <li class="m_jumps_item">
                         <figure>
-                            <img src="images/jumps_05.jpg" alt="Book A Service">
+                            <img src="images/jumps_06.jpg" alt="Book A Service">
                         </figure>
                         <div class="m_jumps_item_des">
                             <h3 class="ttl">Book A Service</h3>
@@ -136,7 +146,7 @@
         <div class="m_section m_locations">
             <div class="container">
                 <div class="m_locations_content">
-                    <figure>
+                    <figure class="m_locations_img">
                         <img src="images/locations.jpg" alt="">
                     </figure>
                     <div class="m_locations_des">
@@ -241,10 +251,15 @@
         <li><a href="#"><img src="images/icn_money.png" alt=""></a></li>
         <li><a href="#"><img src="images/icn_share.png" alt=""></a></li>
     </ul>
-    <!-- Footer -->
+    <!-- sticky -->
+
+    <a class="m_scrollup" href="javascript:void(0)">
+        <i class="fa fa-angle-up" aria-hidden="true"></i>
+    </a>
+    <!-- Return to top -->
 
     <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <!-- JS main -->
     <script src="js/main.js"></script>
 </body>

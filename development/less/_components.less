@@ -94,7 +94,7 @@
 .m {
     &_banner {
         background: url(../images/dealer_01.jpg);
-        padding: 296px 0 260px;
+        padding: 270px 0 259px;
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
@@ -164,10 +164,10 @@
             }
             .frm {
                 &_group {
-                    display: flex;
-                    flex-wrap: wrap;
-                    align-items: center;
-                    justify-content: center;
+                    .flex-display;
+                    .flex-wrap(@wrap: wrap);
+                    .align-items(@align: center);
+                    .justify-content(@justify: center)
                 }
                 &_item {
                     position: relative;
@@ -289,11 +289,10 @@
         z-index: 9997;
         li {
             a {
+                display: block;
                 width: 54px;
-                height: 50px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                height: 48px;
+                line-height: 48px;
                 text-align: center;
                 background-color: #111;
                 margin-bottom: 1px;
@@ -305,7 +304,52 @@
                 &:hover {
                     background-color: #ce181e;
                 }
+                img {
+                    vertical-align: sub;
+                }
             }
+        }
+    }
+    &_scrollup {
+        cursor: pointer;
+        position: fixed;
+        bottom: 4px;
+        right: 5px;
+        width: 40px;
+        height: 40px;
+        background-color: #252525;
+        z-index: 1;
+        transform: translate3d(0, 70px, 0);
+        -webkit-transform: translate3d(0, 70px, 0);
+        -moz-transform: translate3d(0, 70px, 0);
+        -ms-transform: translate3d(0, 70px, 0);
+        -o-transform: translate3d(0, 70px, 0);
+        -webkit-transition: transform 0.4s cubic-bezier(0.55, 0, 0.1, 1) 0s;
+        -moz-transition: transform 0.4s cubic-bezier(0.55, 0, 0.1, 1) 0s;
+        -o-transition: transform 0.4s cubic-bezier(0.55, 0, 0.1, 1) 0s;
+        transition: transform 0.4s cubic-bezier(0.55, 0, 0.1, 1) 0s;
+        &_visible {
+            transform: translate3d(0, 0, 0);
+            -webkit-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+            -ms-transform: translate3d(0, 0, 0);
+            -o-transform: translate3d(0, 0, 0);
+        }
+        &:hover {
+            color: #fff;
+            background: #707070;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+        i {
+            position: relative;
+            color: #fff;
+            font-size: 20px;
+            display: block;
+            text-align: center;
+            width: 40px;
+            top: 7px;
         }
     }
 }
@@ -316,7 +360,7 @@
             &_item {
                 .frm {
                     &_group {
-                        flex-direction: column;
+                        .flex-direction(@direction: column)
                     }
                     &_item {
                         &:first-child {
@@ -341,7 +385,7 @@
     .m {
         &_banner {
             &_content {
-                margin-left: 60px;
+                margin-left: 45px;
             }
         }
         &_jumps {
@@ -361,8 +405,17 @@
             &_content {
                 .flex-display;
                 .align-items(@align: center);
+                .justify-content(@justify: space-around);
+            }
+            &_img {
+                max-width: 51%;
+                -ms-flex: 0 0 51%;
+                flex: 0 0 51%;
             }
             &_des {
+                max-width: 38.1%;
+                -ms-flex: 0 0 38.1%;
+                flex: 0 0 38.1%;
                 margin-left: 190px;
             }
         }
@@ -400,7 +453,7 @@
         &_locations {
             padding: 60px 0;
             &_content {
-                flex-direction: column;
+                .flex-direction(@direction: column);
             }
             &_des {
                 margin-left: 0;
@@ -425,7 +478,7 @@
     }
 }
 
-@media (min-width: 567px) {
+@media (max-width: 767px) and (min-width: 537px) {
     .m {
         &_jumps {
             &_item {
@@ -433,6 +486,14 @@
                 flex: 0 0 50%;
                 max-width: 50%;
             }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .m {
+        &_sticky {
+            width: 40px;
         }
     }
 }
